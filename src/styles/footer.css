@@ -1,0 +1,10 @@
+/* Footer */
+footer {
+  background-color: darkgreen;
+  color: yellow ;
+  text-align: center;
+  padding: 1rem;
+  flex-shrink: 0;
+  height: 7vh   ;
+}
+

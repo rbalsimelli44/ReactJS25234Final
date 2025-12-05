@@ -1,0 +1,6 @@
+main {
+  flex: 1;   
+  width: 100%; /* 100% el ancho disponible */
+  height: 100%; /* 100% del alto disponible */
+  overflow-y: auto; 
+}

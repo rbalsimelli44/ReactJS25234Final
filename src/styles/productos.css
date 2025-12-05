@@ -1,0 +1,49 @@
+/* ===== Productos  ===== */
+.titulo-productos {
+  text-align: center;
+  color: darkgreen;
+  margin-top: 1rem;
+}
+
+/* Grilla del contenedor */
+.contenedor-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  width: 95%;
+  margin: 2rem auto;
+  padding: 0;
+  list-style: none;
+}
+
+/* Tarjeta del producto */
+.tarjeta-producto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: darkolivegreen;
+  color: white;
+  padding: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease;
+}
+
+.tarjeta-producto:hover {
+  transform: scale(1.03);
+}
+
+/* Botones */
+.acciones {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+button {
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,56 @@
+/* Fondo fullscreen */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* Imagen centrada */
+.lightbox-image {
+  max-width: 90%;
+  max-height: 90%;
+  transition: transform 0.15s ease-out;
+  /* user-select: none; */
+}
+
+/* Botón cerrar */
+.lightbox-close {
+  position: fixed;
+  top: 20px;
+  right: 25px;
+  font-size: 40px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+/* Flechas */
+.lightbox-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 70px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.lightbox-arrow.left {
+  left: 30px;
+}
+
+.lightbox-arrow.right {
+  right: 30px;
+}

@@ -1,0 +1,247 @@
+/* Header */
+header {
+  display: flex;
+  width: 100vw; /* 100% el ancho de la pantalla */
+  height: 10vh; /* 10% del alto de la pantalla */
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  background-color: darkgreen;
+  color: yellow;
+  text-align: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 10;
+}
+
+/* Para bloquear ancho mínimo de los extremos */
+.izquierda, .derecha {
+  width: 5vw; 
+  display: flex;
+  align-items: right;
+}
+
+/* Para centrar el texto sin que lo muevan los íconos */
+.centro {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  line-height: 1.1;
+}
+
+header h1 {
+  font-size: clamp(1rem, 2vw, 2.5rem);
+}
+
+header button {
+  border-radius: 8px;
+  border: 2px solid transparent;
+  padding: 0;  
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: inherit;
+  color: white;
+  background-color: darkgreen;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header button:hover {
+  border-color: yellow;
+  background-color: darkolivegreen;
+}   
+
+.logo {
+  height: 1em;
+  padding: 0.1em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(1) .logo {
+    animation: logo-spin infinite 8s linear;
+  }
+}
+
+@keyframes logo-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-pulse 1s infinite ease-in-out;
+  }
+}
+
+@keyframes logo-shake {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 0); }
+  40% { transform: translate(2px, 0); }
+  60% { transform: translate(-2px, 0); }
+  80% { transform: translate(2px, 0); }
+  100% { transform: translate(0); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(3) .logo {
+    animation: logo-shake 4s infinite;
+  }
+}
+
+/* Carrito Contenedor */
+.carrito {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Botón Carrito */
+.carrito-boton {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem;
+}
+
+/* Ícono Carrito*/
+.carrito-icono {
+  display: block;
+  transition: color 0.3s ease;
+}
+
+/* Contador Carrito */
+.carrito-contador {
+  background: red;
+  color: white;
+  border-radius: 50%;
+  font-size: clamp(0.55rem, 1.4vw, 0.85rem);
+  font-weight: 700;
+  min-width: 1.1rem;
+  min-height: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.2rem;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+/* Contador visible cuando hay items */
+.carrito-contador .activo {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Ícono cambia de color si hay items */
+.carrito-boton.activo .carrito-icono {
+  color: red; 
+}
+
+/* Foco / hover opcional */
+.carrito-boton:hover .carrito-icono {
+  filter: brightness(1.2);
+}
+
+/* Modales laterales */
+.modal-lateral {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  z-index: 100;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0rem;
+}
+
+/* Modal de navegación */
+.modal-nav {
+  left: 0;
+  transform: translateX(-100%);
+  width: 25vw;
+}
+
+/* Modal de carrito */
+.modal-cart {
+  right: 0;
+  transform: translateX(100%);
+  width: 45vw;
+}
+
+/* Estado visible */
+.modal-activo {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Fondo semitransparente detrás de modales */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 50;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.backdrop-activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 1rem;
+  }
+  .modal-cart {
+  width: 45vw;
+  }
+  .modal-nav {
+    width: 25vw;
+  }
+}

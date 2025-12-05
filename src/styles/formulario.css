@@ -1,0 +1,36 @@
+/* Contenedor del formulario */
+.formulario-contacto {
+  flex: 1;
+  font-weight: bolder;
+}
+
+.formulario-contacto label {
+  font-weight: bold;   
+  padding-right: 0.4rem;
+}
+
+.formulario-contacto input {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.formulario-contacto button{
+  background-color: lightgreen;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 15%;
+  cursor: pointer;
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  width: fit-content;
+  align-self: center;
+  color: black;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.formulario-contacto button:hover {
+  background-color: green;
+  color: white;
+  transform: scale(1.05);
+}

@@ -1,0 +1,31 @@
+.contenedor-nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    margin: auto;
+    grid-template-rows: auto;
+    grid-column: auto;
+    gap: 0.5em;
+    justify-items: center;
+    text-align: center;
+}
+
+.anhelo {
+    background-color: black;
+    border-radius: 5%;
+    color: yellow;
+    gap: 1px;
+    max-width: 500px;
+    min-width: 200px;
+    margin: auto;
+    padding: 1em;
+}
+
+.nosotros {
+    text-align: center;
+    margin: 1%;
+}

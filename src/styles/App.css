@@ -1,0 +1,45 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estructura general */
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* ocupa todo el viewport */
+  width: 100vw;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Fondo para la pantalla utilizable */
+.fondo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../assets/images/mercadito-fondo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; /* mantiene efecto dentro */
+}
+
+/* Capa difuminada + oscurecida */
+.fondo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  -webkit-backdrop-filter: blur(3px);  /* Difuminado */
+  backdrop-filter: blur(3px);
+  background: rgba(0, 0, 0, 0.20); /* Oscurecido */
+  z-index: 0;
+}
+
+.fondo > * {
+  position: relative;
+  z-index: 1; /* contenido arriba del efecto */
+}

@@ -1,0 +1,98 @@
+.carrito-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  animation: slide 0.25s ease-out;
+  max-height: 90vh;    
+  overflow-y: auto;
+}
+
+.carrito-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.carrito-item {
+  display: flex;
+  gap: 0.6rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.carrito-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 0rem;
+}
+
+.carrito-item .info h3  {
+  margin: 0;
+  flex: 1;
+  font-size: 0.9rem;
+}
+
+.cantidad {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.3rem 0;
+}
+
+.cantidad button {
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+}
+
+.eliminar {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.eliminar:hover {
+  opacity: 0.8;
+}
+
+.carrito-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.carrito-total button {
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.carrito-vacio {
+  text-align: center;
+  margin: 2rem;
+  color: black;
+}
+
+.carrito-vacio a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.carrito-vacio a:hover {
+  text-decoration: underline;
+}
