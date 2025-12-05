@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useCartContext } from "../hooks/useCartContext"
 import { useAuthContext } from "../hooks/useAuthContext";
 
-import '../styles/Productos.css';
+import '../styles/productos.css';
 
 export default function Productos() {
   const [productos, setProductos] = useState([]);
