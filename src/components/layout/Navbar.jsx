@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink, Link } from 'react-router-dom';
 import Icon from '/src/assets/icons/Icon.jsx';
 
-import '../../styles/Navbar.css';
+import '../../styles/navbar.css';
 
 export default function Navbar({ setNavAbierto }) {
   
